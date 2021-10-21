@@ -1,0 +1,25 @@
+{
+  "name": "aliyun-fc-docker-template",
+  "version": "1.0.0",
+  "description": "A template of Aliyun FC",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skyone-wzw/aliyun-fc-docker-template.git"
+  },
+  "keywords": [
+    "serverless"
+  ],
+  "author": "skyone-wzw",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/skyone-wzw/aliyun-fc-docker-template/issues"
+  },
+  "homepage": "https://github.com/skyone-wzw/aliyun-fc-docker-template#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
