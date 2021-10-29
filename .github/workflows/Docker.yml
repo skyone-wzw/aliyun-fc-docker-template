@@ -1,7 +1,7 @@
 name: Docker Image CI
 on:
   push:
-    branches: 
+    branches:
       - master
   workflow_dispatch:
 jobs:
@@ -20,8 +20,13 @@ jobs:
         run: |
           # 使用Dockerfile构建镜像
           docker build . --tag ${{ secrets.DOCKER_IMAGE_TAG }}
-      
+
       - name: Push the Docker image
         run: |
           # 推送镜像到镜像仓库
           docker push ${{ secrets.DOCKER_IMAGE_TAG }}
+
+      - name: Logout Aliyun
+        run: |
+          # 登出阿里云镜像仓库
+          docker logout ${{ secrets.DOCKER_REGISTRY }}
